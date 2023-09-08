@@ -109,8 +109,6 @@ class _SeatSelectionScreenState extends State<SeatSelectionScreen> {
                   selectedSeatList: seatSelectionController.userSelectedSeats,
                   amount: seatSelectionController.seatPrice,
                   busClass: busClass,
-                  bookedSeatsFromDB: bookedSeats,
-                  ticketPrice: ticketPrice,
                 ),
               ),
             ]),
