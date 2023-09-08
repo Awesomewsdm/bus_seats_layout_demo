@@ -4,6 +4,7 @@ import 'package:bus_seats_layout_demo/economy_seat_layout.dart';
 import 'package:bus_seats_layout_demo/executive_seat_layout.dart';
 import 'package:bus_seats_layout_demo/seat_layout_builder.dart';
 import 'package:bus_seats_layout_demo/seat_selection_controller.dart';
+import 'package:bus_seats_layout_demo/seat_status.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
