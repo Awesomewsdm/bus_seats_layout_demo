@@ -47,7 +47,7 @@ class SeatLayoutBuilder extends StatelessWidget {
                   "Bus Type: ${destination.capitalizeFirst} - ${busClass.capitalizeFirst}"),
             ),
             const Divider(
-              color: tLightBlue,
+              color: Colors.lightBlue,
             ),
             ...List.generate(model!.rowBreaks[index], (row) {
               return Wrap(
