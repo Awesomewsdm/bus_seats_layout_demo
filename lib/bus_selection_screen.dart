@@ -67,7 +67,6 @@ class _SeatSelectionScreenState extends State<SeatSelectionScreen> {
       appBar: AppBar(
         title: const Text("Seat Selection Screen"),
       ),
-      backgroundColor: backgroundColor5,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
