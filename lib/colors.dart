@@ -7,3 +7,5 @@ Color emptySeatColor = const Color(0xFFF7F7F7);
 Color activeSeatNumberColor = const Color.fromARGB(255, 255, 255, 255);
 Color inactiveSeatNumberColor = const Color(0xFF929292);
 Color? seatBorder;
+const tBlueColor = Colors.blue;
+const tWhiteColor = Colors.white;

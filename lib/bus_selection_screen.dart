@@ -1,3 +1,5 @@
+import 'package:bus_seats_layout_demo/bottom_button.dart';
+import 'package:bus_seats_layout_demo/button_controller.dart';
 import 'package:bus_seats_layout_demo/colors.dart';
 import 'package:bus_seats_layout_demo/decoration.dart';
 import 'package:bus_seats_layout_demo/economy_seat_layout.dart';
@@ -61,8 +63,8 @@ class _SeatSelectionScreenState extends State<SeatSelectionScreen> {
     // final bookedSeats = bus['bookedSeats'] as List<dynamic>;
     // final destination = bus["destination"] as String;
     // final busClass = bus["busClass"] as String;
-
-    // final ButtonController buttonController = Get.put(ButtonController());
+    const String busClass = "ECONOMY";
+    final ButtonController buttonController = Get.put(ButtonController());
     return Scaffold(
       appBar: AppBar(
         title: const Text("Seat Selection Screen"),
@@ -101,14 +103,14 @@ class _SeatSelectionScreenState extends State<SeatSelectionScreen> {
                 width: size.width - 50,
                 decoration: kBackgroundBoxDecoration,
                 child: SeatLayoutBuilder(
-                  model: busClass == "ECONOMY"
-                      ? economyseatLayout
-                      : executiveseatLayout,
+                  model: economyseatLayout,
                   seatSelectionController: seatSelectionController,
-                  destination: destination,
+                  destination: "Accra",
                   selectedSeatList: seatSelectionController.userSelectedSeats,
                   amount: seatSelectionController.seatPrice,
                   busClass: busClass,
+                  ticketPrice: 100.0,
+                  bookedSeatsFromDB: const [],
                 ),
               ),
             ]),
@@ -188,7 +190,7 @@ class _SeatSelectionScreenState extends State<SeatSelectionScreen> {
             Expanded(
               child: BottomButton(
                 icon: const Icon(
-                  Icons.arrow,
+                  Icons.arrow_forward_ios,
                   color: Colors.white,
                 ),
                 bottomTextLabel: 'PROCEED TO PAYMENT',
